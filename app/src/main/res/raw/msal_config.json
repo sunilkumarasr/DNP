@@ -1,0 +1,15 @@
+{
+  "client_id" : "3e4a6142-7057-4e08-a278-114688ab51ef",
+  "authorization_user_agent" : "DEFAULT",
+  "redirect_uri" : "msauth://com.provizit.dnp/RNy5oraIA7QxAEY9MB%2FZ5j%2FwWgo%3D",
+  "authorities" : [
+    {
+      "type": "AAD",
+      "audience": {
+        "type": "AzureADMultipleOrgs",
+        "tenant_id": "organizations"
+      }
+    }
+  ]
+}
+

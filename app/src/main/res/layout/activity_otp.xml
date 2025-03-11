@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/relative_internet"
+            layout="@layout/no_internet"/>
+
+        <RelativeLayout
+            android:id="@+id/relative_ui"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/appbarlayout"
+                android:elevation="4dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:minHeight="?attr/actionBarSize"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleTextColor="#ffffff">
+
+                </androidx.appcompat.widget.Toolbar>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_above="@+id/tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/colorPrimary"
+                    style="@style/regular_font"
+                    android:text="******@example.com"
+                    android:layout_marginBottom="7dp"
+                    android:textSize="@dimen/edittext_size" />
+
+                <TextView
+                    android:id="@+id/tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/colorPrimary"
+                    android:alpha="0.5"
+                    style="@style/regular_font"
+                    android:text="Please enter the code we sent to this email ID"
+                    android:textSize="19dp" />
+
+                <RelativeLayout
+                    android:id="@+id/inputs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/useidLinear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            app:boxBackgroundColor="#ffffff"
+                            app:boxCornerRadiusBottomEnd="10dp"
+                            app:boxCornerRadiusBottomStart="10dp"
+                            app:boxCornerRadiusTopEnd="10dp"
+                            app:boxCornerRadiusTopStart="10dp">
+
+                            <EditText
+                                android:id="@+id/t1"
+                                android:layout_width="45dp"
+                                android:layout_height="wrap_content"
+                                style="@style/medium_font"
+                                android:inputType="text"
+                                android:maxLength="1"
+                                android:padding="12dp"
+                                android:paddingStart="18dp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/bold_date"
+                                android:textStyle="bold" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            app:boxBackgroundColor="#ffffff"
+                            app:boxCornerRadiusBottomEnd="10dp"
+                            app:boxCornerRadiusBottomStart="10dp"
+                            app:boxCornerRadiusTopEnd="10dp"
+                            app:boxCornerRadiusTopStart="10dp">
+
+                            <EditText
+                                android:id="@+id/t2"
+                                android:layout_width="45dp"
+                                android:layout_height="wrap_content"
+                                style="@style/medium_font"
+                                android:inputType="text"
+                                android:maxLength="1"
+                                android:padding="12dp"
+                                android:paddingStart="18dp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/bold_date"
+                                android:textStyle="bold" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            app:boxBackgroundColor="#ffffff"
+                            app:boxCornerRadiusBottomEnd="10dp"
+                            app:boxCornerRadiusBottomStart="10dp"
+                            app:boxCornerRadiusTopEnd="10dp"
+                            app:boxCornerRadiusTopStart="10dp">
+
+                            <EditText
+                                android:id="@+id/t3"
+                                android:layout_width="45dp"
+                                android:layout_height="wrap_content"
+                                style="@style/medium_font"
+                                android:inputType="text"
+                                android:maxLength="1"
+                                android:padding="12dp"
+                                android:paddingStart="18dp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/bold_date"
+                                android:textStyle="bold" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            app:boxBackgroundColor="#ffffff"
+                            app:boxCornerRadiusBottomEnd="10dp"
+                            app:boxCornerRadiusBottomStart="10dp"
+                            app:boxCornerRadiusTopEnd="10dp"
+                            app:boxCornerRadiusTopStart="10dp">
+
+                            <EditText
+                                android:id="@+id/t4"
+                                android:layout_width="45dp"
+                                android:layout_height="wrap_content"
+                                style="@style/medium_font"
+                                android:inputType="text"
+                                android:maxLength="1"
+                                android:padding="12dp"
+                                android:paddingStart="18dp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/bold_date"
+                                android:textStyle="bold" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/resend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/useidLinear"
+                        android:layout_marginLeft="-85dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/useidLinear"
+                        style="@style/medium_font"
+                        android:text=" Resend  "
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

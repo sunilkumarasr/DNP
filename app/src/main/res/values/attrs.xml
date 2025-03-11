@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HorizontalCalendarView">
+        <!-- Default text color for all texts -->
+        <attr name="textColorNormal" format="color" />
+        <!-- Default top text color -->
+        <attr name="colorTopText" format="color" />
+        <!-- Default Middle text color -->
+        <attr name="colorMiddleText" format="color" />
+        <!-- Default Bottom text color -->
+        <attr name="colorBottomText" format="color" />
+
+        <!-- Selected item's text color for all texts -->
+        <attr name="textColorSelected" format="color" />
+        <!-- Selected item's top text color -->
+        <attr name="colorTopTextSelected" format="color" />
+        <!-- Selected item's Middle text color -->
+        <attr name="colorMiddleTextSelected" format="color" />
+        <!-- Selected item's Bottom text color -->
+        <attr name="colorBottomTextSelected" format="color" />
+        <!-- Selected item's background drawable -->
+        <attr name="selectedDateBackground" format="reference" />
+
+        <!-- Background color for selector bar. -->
+        <attr name="selectorColor" format="color" />
+
+        <!-- Top text size -->
+        <attr name="sizeTopText" format="dimension" />
+        <!-- Middle text size -->
+        <attr name="sizeMiddleText" format="dimension" />
+        <!-- Bottom text size -->
+        <attr name="sizeBottomText" format="dimension" />
+
+    </declare-styleable>
+    <declare-styleable name="WeekView">
+        <attr name="firstDayOfWeek" format="enum">
+            <enum name="sunday" value="1"/>
+            <enum name="monday" value="2"/>
+            <enum name="tuesday" value="3"/>
+            <enum name="wednesday" value="4"/>
+            <enum name="thursday" value="5"/>
+            <enum name="friday" value="6"/>
+            <enum name="saturday" value="7"/>
+        </attr>
+        <attr name="hourHeight" format="dimension"/>
+        <attr name="minHourHeight" format="dimension"/>
+        <attr name="maxHourHeight" format="dimension"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="eventTextSize" format="dimension"/>
+        <attr name="headerColumnPadding" format="dimension"/>
+        <attr name="headerRowPadding" format="dimension"/>
+        <attr name="columnGap" format="dimension"/>
+        <attr name="headerColumnTextColor" format="color"/>
+        <attr name="noOfVisibleDays" format="integer"/>
+        <attr name="showFirstDayOfWeekFirst" format="boolean"/>
+        <attr name="headerRowBackgroundColor" format="color"/>
+        <attr name="dayBackgroundColor" format="color"/>
+        <attr name="hourSeparatorColor" format="color"/>
+        <attr name="todayBackgroundColor" format="color"/>
+        <attr name="todayHeaderTextColor" format="color"/>
+        <attr name="hourSeparatorHeight" format="dimension"/>
+        <attr name="eventTextColor" format="color"/>
+        <attr name="eventPadding" format="dimension"/>
+        <attr name="headerColumnBackground" format="color"/>
+        <attr name="dayNameLength" format="enum">
+            <enum name="length_short" value="1"/>
+            <enum name="length_long" value="2"/>
+        </attr>
+        <attr name="overlappingEventGap" format="dimension"/>
+        <attr name="eventMarginVertical" format="dimension"/>
+        <attr name="xScrollingSpeed" format="float"/>
+        <attr name="eventCornerRadius" format="dimension"/>
+        <attr name="showDistinctPastFutureColor" format="boolean"/>
+        <attr name="showDistinctWeekendColor" format="boolean"/>
+        <attr name="futureBackgroundColor" format="color"/>
+        <attr name="pastBackgroundColor" format="color"/>
+        <attr name="futureWeekendBackgroundColor" format="color"/>
+        <attr name="pastWeekendBackgroundColor" format="color"/>
+        <attr name="showNowLine" format="boolean"/>
+        <attr name="nowLineColor" format="color"/>
+        <attr name="nowLineThickness" format="dimension"/>
+        <attr name="horizontalFlingEnabled" format="boolean"/>
+        <attr name="verticalFlingEnabled" format="boolean"/>
+        <attr name="allDayEventHeight" format="dimension"/>
+        <attr name="scrollDuration" format="integer"/>
+    </declare-styleable>
+    <attr name="compactCalendarEventIndicatorStyle" format="enum">
+        <enum name="fill_large_indicator" value="1" />
+        <enum name="no_fill_large_indicator" value="2" />
+        <enum name="small_indicator" value="3" />
+    </attr>
+    <attr name="compactCalendarCurrentDayIndicatorStyle" format="enum">
+        <enum name="fill_large_indicator" value="1" />
+        <enum name="no_fill_large_indicator" value="2" />
+    </attr>
+    <attr name="compactCalendarCurrentSelectedDayIndicatorStyle" format="enum">
+        <enum name="fill_large_indicator" value="1" />
+        <enum name="no_fill_large_indicator" value="2" />
+    </attr>
+    <declare-styleable name="CompactCalendarView">
+        <attr name="compactCalendarTextSize" format="dimension"/>
+        <attr name="compactCalendarBackgroundColor" format="color"/>
+        <attr name="compactCalendarCurrentDayBackgroundColor" format="color"/>
+        <attr name="compactCalendarCurrentDayTextColor" format="color"/>
+        <attr name="compactCalendarCurrentSelectedDayBackgroundColor" format="color"/>
+        <attr name="compactCalendarCurrentSelectedDayTextColor" format="color"/>
+        <attr name="compactCalendarTextColor" format="color"/>
+        <attr name="compactCalendarMultiEventIndicatorColor" format="color"/>
+        <attr name="compactCalendarTargetHeight" format="dimension"/>
+        <attr name="compactCalendarEventIndicatorStyle"/>
+        <attr name="compactCalendarCurrentDayIndicatorStyle"/>
+        <attr name="compactCalendarCurrentSelectedDayIndicatorStyle"/>
+        <attr name="compactCalendarDisplayOtherMonthDays" format="boolean"/>
+        <attr name="compactCalendarShouldSelectFirstDayOfMonthOnScroll" format="boolean"/>
+        <attr name="compactCalendarOtherMonthDaysTextColor" format="color"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+</resources>

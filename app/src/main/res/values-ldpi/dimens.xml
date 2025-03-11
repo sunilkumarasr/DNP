@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="edittext_size">10sp</dimen>
+    <dimen name="text_size">11sp</dimen>
+    <dimen name="TextLabel">8sp</dimen>
+    <dimen name="icon_size">32dp</dimen>
+    <dimen name="w_size">12sp</dimen>
+    <dimen name="l_height">30dp</dimen>
+    <dimen name="pop_width">210dp</dimen>
+    <dimen name="width_search">-1.0px</dimen>
+
+    <dimen name="vertical_border_height">@dimen/width_search</dimen>
+    <bool name="isTablet">false</bool>
+    <dimen name="img_height">110dp</dimen>
+    <dimen name="img_width">75dp</dimen>
+    <dimen name="cimg_height">150dp</dimen>
+    <dimen name="cimg_width">100dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+
+    <dimen name="margin_low">4dp</dimen>
+    <dimen name="small_text">8sp</dimen>
+    <dimen name="large_text">12sp</dimen>
+
+    <dimen name="bold_date">13sp</dimen>
+    <dimen name="time_text">11sp</dimen>
+    <dimen name="subject_text">17sp</dimen>
+</resources>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="slot"><b>(Parking: )</b></string>
+    <string name="app_name">Provizit Digital Nameplate</string>
+    <string name="home">Home</string>
+    <string name="meeting_rooms">Meeting Rooms</string>
+    <string name="today">Today</string>
+    <string name="appointment_Requests">Appointment Requests</string>
+    <string name="designation">Designation</string>
+    <string name="department">Department</string>
+    <string name="email">Email</string>
+    <string name="mobile">Mobile</string>
+    <string name="add_co_guest">Add Co-Guest</string>
+    <string name="guest_email">Guest Email</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_guest_s">Add Guest(s)</string>
+    <string name="assign">Assign</string>
+    <string name="employee">Employee</string>
+    <string name="location">Location</string>
+    <string name="fort">For:</string>
+    <string name="Notes">Notes</string>
+    <string name="is_here_to_see_you_for">is here to see you</string>
+    <string name="badge_no">Badge No: </string>
+    <string name="time">Time: </string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="date">Date: </string>
+    <string name="purpose_of_visit">Purpose Of Visit:</string>
+    <string name="email_address">Email Address:</string>
+    <string name="mobile_number">Mobile Number:</string>
+    <string name="organization">Organization:</string>
+    <string name="ok">OK</string>
+    <string name="send">Send</string>
+    <string name="meeting_title">Meeting Title</string>
+    <string name="meeting_subject">Meeting Subject</string>
+    <string name="meeting">Meeting</string>
+    <string name="my_meeting">My Meeting</string>
+    <string name="agenda">Agenda</string>
+    <string name="add_visitor_eg_email">Add Visitor (eg: Email)</string>
+    <string name="visitor_details">Visitor Details</string>
+    <string name="submit">Submit</string>
+    <string name="reason_for_reschedule">Reason for Reschedule</string>
+    <string name="request_for_reschedule">Request for Reschedule</string>
+    <string name="request">Request</string>
+    <string name="host">Host: </string>
+    <string name="Date_and_time">Date and time</string>
+    <string name="reschedule">Reschedule</string>
+    <string name="approve">Approve</string>
+    <string name="reject">Reject</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="add_guest">Add Guest</string>
+    <string name="checkIn">CheckIn</string>
+    <string name="checkIn_request">Check-In Request</string>
+    <string name="checkout">CheckOut</string>
+    <string name="Category">Category</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="no_meetings">No Meetings</string>
+    <string name="past">Past</string>
+    <string name="Guests">Guests</string>
+    <string name="Guest">Guest</string>
+    <string name="Resend">Resend</string>
+    <string name="Outside">Outside</string>
+    <string name="Virtual">Virtual</string>
+    <string name="AllotParking">Allot Parking</string>
+    <string name="autoAllotParking">Auto Allot Parking</string>
+    <string name="OnPremises">On Premises</string>
+    <string name="UploadPDF">Upload PDF</string>
+    <string name="invitees">Invitees</string>
+    <string name="ViewMore">ViewMore</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="walkin">Walk-in</string>
+
+
+    <string name="sorry">Sorry!</string>
+    <string name="is_not_available_at_this_time">is not available at this time</string>
+    <string name="try_changing_the_time_if_you_want_this__room">Try changing the time, if you want this room</string>
+    <string name="change">Change</string>
+    <string name="or">OR</string>
+    <string name="select_any_of_these_available_rooms">Select any of these available rooms</string>
+    <string name="please_enter_the_code_we_sent_to_this_email_iD">Please enter the code we sent to this email ID</string>
+    <string name="enter_existing_your_password">Enter your Existing password</string>
+    <string name="please_choose_your_password">Please choose your password</string>
+    <string name="please_reenter_your_password">Please re-enter your password</string>
+    <string name="next">NEXT</string>
+    <string name="back">BACK</string>
+    <string name="amenities">Amenities</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="confirm">Confirm</string>
+    <string name="warning">Warning</string>
+    <string name="add_at_least_one_invitee_to_proceed">Add at least one invitee to proceed</string>
+    <string name="enter_subject">Enter Subject</string>
+    <string name="you_have_another_meeting_at_this_time.">You have another meeting at this time.</string>
+    <string name="enter_meeting_link">Enter Meeting Link</string>
+    <string name="enter_meeting_location">Enter Meeting Location</string>
+    <string name="cabin">Cabin</string>
+    <string name="persons">persons</string>
+    <string name="pending">Pending</string>
+    <string name="Cancelled">Cancelled</string>
+    <string name="accepted">Accepted</string>
+    <string name="declined">Declined</string>
+    <string name="please_paste_the_meeting_link_here.">Please paste the meeting link here.</string>
+    <string name="please_enter_the_meeting_location_here.">Please enter the meeting location here.</string>
+    <string name="Original_schedule">Original schedule</string>
+    <string name="suggested_schedule">Suggested schedule</string>
+    <string name="where">Where:</string>
+    <string name="self_account_not_acceptable">Self Account Not Acceptable</string>
+    <string name="Mobile_number_not_valid">Mobile Number not valid</string>
+    <string name="Wrong_address">Wrong address</string>
+
+    <!--    decline-->
+    <string name="are_you_sure_do_you_want_to_decline_the_request">Are you sure do you want to decline the request?</string>
+
+
+    <!--    today visitor slots-->
+    <string name="v_slot">Slot</string>
+
+    <!--    appointment Details-->
+    <string name="requests">Requests</string>
+    <string name="appointment_p">Appointment</string>
+    <string name="appointment_details">Appointment Details</string>
+    <string name="appointment_request">Appointment Request</string>
+    <string name="appointment_booking">Appointment Booking</string>
+    <string name="new_product_discution">New Product Discussion</string>
+    <string name="name">Name</string>
+    <string name="from">From</string>
+    <string name="phone">Phone</string>
+    <string name="organization_a">Organization</string>
+    <string name="note">Note</string>
+    <string name="Approval">Approval</string>
+    <string name="room_Approval">Room Approval</string>
+    <string name="approval_request">Approval Request</string>
+    <string name="Meetingroom_approval_request">Meetingroom Approval Request</string>
+
+
+    <!--    appointment Details-->
+    <string name="reports">Reports</string>
+    <!--    Reports Details-->
+
+    <string name="visitor_r">Visitor</string>
+    <string name="purpose_r">Purpose</string>
+    <string name="designation_r">Designation</string>
+    <string name="organization_r">Organization</string>
+    <string name="organization_address_r">Organization Address</string>
+    <string name="nationality_r">Nationality</string>
+    <string name="host_r">Host</string>
+    <string name="department_r">Department</string>
+    <string name="location_venue_r">Location/Venue</string>
+    <string name="show_more_r">Show More</string>
+    <string name="show_less_r">Show Less</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <!--    email edit-->
+    <string name="update">Update</string>
+
+
+    <!--    Notifications-->
+    <string name="notifications">Notifications</string>
+    <string name="has_invited_you_for_meeting">has invited you for meeting</string>
+    <string name="has_accepted_you_for_meeting_request">has accepted your meeting request</string>
+    <string name="inviitee_has_declined_your_meeting_request">has declined your meeting request </string>
+    <string name="wants_to_reschedule_the_meeting">wants to reschedule the meeting</string>
+    <string name="has_rescheduled_the_meeting"> has  rescheduled the meeting</string>
+    <string name="has_cancelled_the_meeting"> has cancelled the meeting</string>
+    <string name="requests_for_meeting_approval"> requests for meeting approval</string>
+    <string name="has_approved_your_meeting_request"> has  approved your meeting request</string>
+    <string name="has_rejected_your_meeting_request"> has  rejected your meeting request</string>
+    <string name="has_requested_Appointment_for">has requested Appointment for</string>
+    <string name="has_accepted_your_appointment_request_for">has accepted your appointment request for</string>
+    <string name="has_rejected_your_appointment_request_for">has  rejected your appointment request for</string>
+    <string name="has_checked_in_for">has  checked in for meeting</string>
+    <string name="has_accepted_you_check_In_request">has accepted your check-In request</string>
+    <string name="has_declined_you_check_In_request">has declined your check-In request</string>
+
+
+    <!--    reccuring-->
+    <string name="Recurring_event_date_picker">Recurring event date picker</string>
+    <string name="frequency">Frequency</string>
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="date_range">Date Range</string>
+    <string name="Number_of_occurrences">Number of occurrences:</string>
+    <string name="Repeat_on">Repeat on</string>
+    <string name="From_Date">From Date</string>
+    <string name="to_Date">To Date</string>
+    <string name="Select_Day">Select Day</string>
+    <string name="clear">Clear</string>
+    <string name="reccurencemeeting">Recurring meeting</string>
+
+
+    <string name="Mon">Mon</string>
+    <string name="Tue">Tue</string>
+    <string name="Wed">Wed</string>
+    <string name="Thu">Thu</string>
+    <string name="Fri">Fri</string>
+    <string name="Sat">Sat</string>
+    <string name="Sun">Sun</string>
+
+
+    <!--    contact-->
+    <string name="contact_details">Contact Details</string>
+    <string name="done">Done</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="Create_new_contact">Create new contact</string>
+    <string name="Add_to_existing_contacts">Add to existing contacts</string>
+
+    <string name="i_agree_with_thepolicy_under"><u>I agree with the Privacy Policy</u></string>
+    <string name="i_agree_with_thepolicy">I agree with the Privacy Policy</string>
+
+
+    <!--    exit app-->
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="New_Meeting">New Meeting</string>
+    <string name="Do_you_want_to_exit_the_meeting_setup">Do you want to exit the meeting setup?</string>
+    <string name="Do_you_want_to_exit_the_application">Do you want to exit the Application?</string>
+
+    <!--    internetconnection-->
+    <string name="net_connection">Check your Internet Connection</string>
+    <string name="connection_interrupted">Connection Interrupted</string>
+    <string name="Your_Offline">Your Offline</string>
+    <string name="Please_check_your_internet_connection">Please check your internet connection</string>
+    <string name="Seems_like_you_dont_have_active_internet_connection">Seems like you dont have active internet connection</string>
+    <string name="Retry">Retry</string>
+
+
+    <string name="Reschedule">Reschedule</string>
+    <string name="request_to_Reschedule">Request to reschedule</string>
+    <string name="skip">Skip</string>
+
+
+    <!--    Update-->
+    <string name="update_Required">Update Required</string>
+    <string name="update_info">Please update your app for enhanced experience</string>
+    <string name="update_now">Update Now</string>
+
+    <!--    logout-->
+    <string name="logout_note">Are you sure you want to logout?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

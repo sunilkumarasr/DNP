@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.2.2"
+    }
+}
+
+plugins {
+    id "org.sonarqube" version "5.0.0.4638"
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://pkgs.dev.azure.com/MicrosoftDeviceSDK/DuoSDK-Public/_packaging/Duo-SDK-Feed/maven/v1'
+        }
+    }
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "DNP"  // Unique key for your project
+        property "sonar.host.url", "http://localhost:9000" // SonarQube server URL
+        property "sonar.login", "sqp_2cbba91b69ee32281928735aca3c1c818ec96ff5" // Authentication token
+    }
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="slot"><b>(Parking: )</b></string>
+    <string name="app_name">PROVIZIT</string>
+    <string name="Notes">ملاحظات</string>
+    <string name="home">بيت</string>
+    <string name="meeting_rooms">غرف الإجتماعات</string>
+    <string name="today">اليوم</string>
+    <string name="appointment_Requests">موعد</string>
+    <string name="designation">تعيين</string>
+    <string name="department">الإدارة</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="mobile">التليفون المحمول</string>
+    <string name="add_co_guest">إضافة ضيف مشارك</string>
+    <string name="guest_email">ضيف البريد الإلكتروني</string>
+    <string name="cancel">الغاء</string>
+    <string name="add_guest_s">اضافة زائر</string>
+    <string name="assign">تعيين</string>
+    <string name="employee">الموظف</string>
+    <string name="location">موقع</string>
+    <string name="fort">:غاية</string>
+    <string name="is_here_to_see_you_for">هنا لرؤيتك</string>
+    <string name="badge_no">"رقم الشارة</string>
+    <string name="time">:زمن </string>
+    <string name="start_time">وقت البدء</string>
+    <string name="end_time">وقت النهاية</string>
+    <string name="date">تاريخ: </string>
+    <string name="purpose_of_visit">"الغرض من الزيارة"</string>
+    <string name="email_address">عنوان البريد الإلكتروني</string>
+    <string name="mobile_number">رقم الهاتف المحمول</string>
+    <string name="organization">"منظمة"</string>
+    <string name="ok">موافق</string>
+    <string name="send">إرسال</string>
+    <string name="meeting_title">موضوع الاجتماع</string>
+    <string name="meeting_subject">موضوع الاجتماع</string>
+    <string name="meeting">اجتماع</string>
+    <string name="my_meeting">لقائي</string>
+    <string name="agenda">جدولة الاعمال</string>
+    <string name="add_visitor_eg_email">اضافة زائر</string>
+    <string name="visitor_details">تفاصيل الزائر</string>
+    <string name="submit">إرسال</string>
+    <string name="reason_for_reschedule">اعادة جدولة سبب الى</string>
+    <string name="request_for_reschedule">طلب إعادة جدولة</string>
+    <string name="request">طلب</string>
+    <string name="host">المضيف:</string>
+    <string name="Date_and_time">التاريخ و الوقت</string>
+    <string name="reschedule">إعادة الجدولة</string>
+    <string name="approve">موافقة</string>
+    <string name="reject">رفض</string>
+    <string name="accept">قبول</string>
+    <string name="decline">الرفض</string>
+    <string name="add_guest">اضافة زائر</string>
+    <string name="checkIn">تسجيل الوصول</string>
+    <string name="checkIn_request">طلب تسجيل الوصول</string>
+    <string name="checkout">الدفع</string>
+    <string name="Category">فئة</string>
+    <string name="upcoming">القادمة</string>
+    <string name="past">ماضي</string>
+    <string name="no_meetings">لا یوجد اجتماعات!</string>
+    <string name="Guests">الضيوف</string>
+    <string name="Guest">الضيوف</string>
+    <string name="Resend">إعادة إرسال</string>
+    <string name="Outside">خارج المقر</string>
+    <string name="Virtual">إفتراضي</string>
+    <string name="AllotParking">تعيين الموقف</string>
+    <string name="autoAllotParking">تخصيص مواقف السيارات</string>
+    <string name="OnPremises">داخل المقر</string>
+    <string name="UploadPDF">أرفاق PDF</string>
+    <string name="invitees">المدعوون</string>
+    <string name="ViewMore">عرض المزيد</string>
+    <string name="forgot_password">هل نسيت كلمة السر</string>
+    <string name="walkin">ادخل</string>
+
+
+    <string name="sorry">أعتذر!</string>
+    <string name="is_not_available_at_this_time">غير متوفر في هذا الوقت</string>
+    <string name="try_changing_the_time_if_you_want_this__room">غير الوقت، إذا كنت ترغب هذه الغرفة</string>
+    <string name="change">تغيير</string>
+    <string name="or">أو</string>
+    <string name="select_any_of_these_available_rooms">أختر إحدى هذه الغرف المتاحة</string>
+    <string name="please_enter_the_code_we_sent_to_this_email_iD">فضلا أدخل الرمز المرسل على هذا الإيميل</string>
+    <string name="enter_existing_your_password">أدخل كلمة المرور الحالية الخاصة بك</string>
+    <string name="please_choose_your_password">فضلا أدخل الرقم السري</string>
+    <string name="please_reenter_your_password">فضلا تأكد الرقم السري</string>
+    <string name="next">التالي</string>
+    <string name="back">السابق</string>
+    <string name="amenities">وسائل المتوفرة</string>
+    <string name="confirmation">تأكيد</string>
+    <string name="confirm">يتأكد</string>
+    <string name="warning">تحذير</string>
+    <string name="add_at_least_one_invitee_to_proceed">أضف مدعوًا واحدًا على الأقل للمتابعة</string>
+    <string name="enter_subject">أدخل الموضوع</string>
+    <string name="you_have_another_meeting_at_this_time.">لديك اجتماع آخر في هذا الوقت.</string>
+    <string name="enter_meeting_link">أدخل رابط الاجتماع</string>
+    <string name="enter_meeting_location">أدخل موقع الاجتماع</string>
+    <string name="cabin">غرفة</string>
+    <string name="persons">الأشخاص</string>
+    <string name="pending">ريثما</string>
+    <string name="Cancelled">ألغيت</string>
+    <string name="accepted">قبلت</string>
+    <string name="declined">رفض</string>
+    <string name="please_paste_the_meeting_link_here.">يرجى لصق رابط الاجتماع هنا.</string>
+    <string name="please_enter_the_meeting_location_here.">الرجاء إدخال موقع الاجتماع هنا.</string>
+    <string name="Original_schedule">الجدول الأصلي</string>
+    <string name="suggested_schedule">الجدول الزمني المقترح</string>
+    <string name="where">أين:</string>
+    <string name="self_account_not_acceptable">الحساب الذاتي غير مقبول</string>
+    <string name="Mobile_number_not_valid">رقم الجوال غير صالح</string>
+    <string name="Wrong_address">عنوان خاطئ</string>
+
+    <!--    decline-->
+    <string name="are_you_sure_do_you_want_to_decline_the_request">هل أنت متأكد أنك تريد رفض الطلب؟</string>
+
+
+    <!--    today visitor slots-->
+    <string name="v_slot">فتحة</string>
+
+
+    <!--    appointment Details-->
+    <string name="requests">درخواستیں</string>
+    <string name="appointment_p">تقرری</string>
+    <string name="appointment_details">ملاقات کی تفصیلات</string>
+    <string name="appointment_request">طلب موعد</string>
+    <string name="appointment_booking">حجز موعد</string>
+    <string name="new_product_discution">نئی مصنوعات کی بحث</string>
+    <string name="name">نام</string>
+    <string name="from">من</string>
+    <string name="phone">هاتف</string>
+    <string name="organization_a">منظمة</string>
+    <string name="note">نوٹ</string>
+    <string name="Approval">موافقة</string>
+    <string name="room_Approval">الموافقة على الغرفة</string>
+    <string name="approval_request">طلب مقبول</string>
+    <string name="Meetingroom_approval_request">طلب الموافقة على قاعة الاجتماعات</string>
+
+    <!--    appointment Details-->
+    <string name="reports">التقارير</string>
+
+    <!--    Reports Details-->
+
+    <string name="visitor_r">وزیٹر</string>
+    <string name="purpose_r">مقصد</string>
+    <string name="designation_r">عہدہ</string>
+    <string name="organization_r">تنظیم</string>
+    <string name="organization_address_r">تنظیم کا پتہ</string>
+    <string name="nationality_r">قومیت</string>
+    <string name="host_r">میزبان</string>
+    <string name="department_r">شعبہ</string>
+    <string name="location_venue_r">مقام/جگہ</string>
+    <string name="show_more_r">مزید دکھائیں</string>
+    <string name="show_less_r">کم دکھائیں۔</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <!--    email edit-->
+    <string name="update">اپ ڈیٹ</string>
+
+    <!--    Notifications-->
+    <string name="notifications">الاشعارات والتبيهات</string>
+    <string name="has_invited_you_for_meeting">وجهك دعوة للإجتماع</string>
+    <string name="has_accepted_you_for_meeting_request">وافق طلبك للإجتماع</string>
+    <string name="inviitee_has_declined_your_meeting_request">رفض طلبك للإجتماع</string>
+    <string name="wants_to_reschedule_the_meeting">يرغب في إعادة جدولة الاجتماع</string>
+    <string name="has_rescheduled_the_meeting">حدث موعد الإجتماع</string>
+    <string name="has_cancelled_the_meeting">ألغى الإجتماع</string>
+    <string name="requests_for_meeting_approval">طلبات الموافقة على الإجتماع</string>
+    <string name="has_approved_your_meeting_request">وافق على طلبك للإجتماع</string>
+    <string name="has_rejected_your_meeting_request">رفض طلبك للإجتماع</string>
+    <string name="has_requested_Appointment_for">طلب موعدًا لـ</string>
+    <string name="has_accepted_your_appointment_request_for">وافق على طلب موعدك لـ</string>
+    <string name="has_rejected_your_appointment_request_for">رفض طلب موعدك لـ</string>
+    <string name="has_checked_in_for">قام بتسجيل الوصول للاجتماع</string>
+    <string name="has_accepted_you_check_In_request">وافق على طلب تسجيل الوصول الخاص بك</string>
+    <string name="has_declined_you_check_In_request">رفض طلب تسجيل الوصول الخاص بك</string>
+
+
+
+    <!--    reccuring-->
+    <string name="Recurring_event_date_picker">منتقي تاريخ الحدث المتكرر</string>
+    <string name="frequency">تكرار</string>
+    <string name="daily">اليومي</string>
+    <string name="weekly">أسبوعي</string>
+    <string name="monthly">شهريا</string>
+    <string name="date_range">نطاق الموعد</string>
+    <string name="Number_of_occurrences">عدد مرات الحدوث:</string>
+    <string name="Repeat_on">كرر على</string>
+    <string name="From_Date">من التاريخ</string>
+    <string name="to_Date">حتي اليوم</string>
+    <string name="Select_Day">حدد اليوم</string>
+    <string name="clear">صافي</string>
+    <string name="reccurencemeeting">لقاء متكرر</string>
+
+
+    <string name="Mon">الإثنين</string>
+    <string name="Tue">الثلاثاء</string>
+    <string name="Wed">تزوج</string>
+    <string name="Thu">خميس</string>
+    <string name="Fri">الجمعة</string>
+    <string name="Sat">قعد</string>
+    <string name="Sun">شمس</string>
+
+
+    <!--    contact-->
+    <string name="contact_details">بيانات المتصل</string>
+    <string name="done">فعله</string>
+    <string name="add_contact">إضافة جهة اتصال</string>
+    <string name="Create_new_contact">إنشاء اتصال جديد</string>
+    <string name="Add_to_existing_contacts">أضف إلى جهات الاتصال الموجودة</string>
+
+    <string name="i_agree_with_thepolicy_under"><u>I agree with the Privacy Policy</u></string>
+    <string name="i_agree_with_thepolicy">I agree with the Privacy Policy</string>
+
+
+    <!--    exit app-->
+    <string name="Yes">نعم</string>
+    <string name="No">رقم</string>
+    <string name="New_Meeting">اجتماع جديد</string>
+    <string name="Do_you_want_to_exit_the_meeting_setup">هل تريد الخروج من إعدادات الاجتماع؟</string>
+    <string name="Do_you_want_to_exit_the_application">هل تريد الخروج من التطبيق؟</string>
+
+
+    <!--    internetconnection-->
+    <string name="net_connection">تحقق من اتصال الإنترنت الخاص بك</string>
+    <string name="connection_interrupted">الاتصال انقطع</string>
+    <string name="Your_Offline">الخاص بك حاليا</string>
+    <string name="Please_check_your_internet_connection">الرجاء التحقق من اتصال الانترنت الخاص بك</string>
+    <string name="Seems_like_you_dont_have_active_internet_connection">يبدو أنه ليس لديك اتصال إنترنت نشط</string>
+    <string name="Retry">أعد المحاولة</string>
+
+    <string name="Reschedule">إعادة الجدولة</string>
+    <string name="request_to_Reschedule">طلب إعادة الجدولة</string>
+    <string name="skip">يتخطى</string>
+
+    <!--    Update-->
+    <string name="update_Required">مطلوب التحديث</string>
+    <string name="update_info">يرجى تحديث التطبيق الخاص بك للحصول على تجربة أفضل</string>
+    <string name="update_now">تحديث الان</string>
+
+    <!--    logout-->
+    <string name="logout_note">هل أنت متأكد من تسجيل الخروج؟</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+</resources>

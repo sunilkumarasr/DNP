@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#323D59</color>
+    <color name="colorPrimaryDark">#323D59</color>
+    <color name="colorAccent">#323D59</color>
+    <color name="hash_color">#DBDBDB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000</color>
+    <color name="hash">#CCCCCC</color>
+    <color name="card_hash">#e8e8e8</color>
+    <color name = "text_color">#494949</color>
+    <color name="a_color">#ad2121</color>
+    <color name="m_color">#1e90ff</color>
+    <color name="r_color">#FFEB3B</color>
+    <color name="a_color1">#4D414F6C</color>
+    <color name="m_color1">#1A414F6C</color>
+    <color name="r_color1">#33414F6C</color>
+    <color name="meeting_color">#deecf8</color>
+    <color name="gray">#9a9a9a</color>
+    <color name="light_gray">#efefef</color>
+    <color name="splash_gray">#e6e5e5</color>
+    <color name="red">#EC1F27</color>
+    // Meeting Status Color
+    <color name="Pending">#C1A648</color>
+    <color name="suggestionPage">#D9A754</color>
+    <color name="Cancel">#840000</color>
+    <color name="Decline">#E96E56</color>
+    <color name="Accept">#37845D</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="app_tcolor">#414F6C</color>
+    <color name="inprogress">#E4080E</color>
+    <color name="soon">#1A8EFB</color>
+    <color name="nextmeeting">#21A505</color>
+    <color name="gradentcolor">#273746</color>
+    <color name="emptycardcolor">#e7e7e7</color>
+    <color name="cardbagrd">#E6E6E6</color>
+
+</resources>

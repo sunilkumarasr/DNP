@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/empty_card"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="570dp"
+    android:layout_height="150dp"
+    android:background="@drawable/card_border"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:gravity="center_horizontal"
+    android:backgroundTint="@color/emptycardcolor">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/nomeeting"
+        android:alpha="0.3"/> <!-- Set transparency here (0.5 for 50% transparency) -->
+</LinearLayout>

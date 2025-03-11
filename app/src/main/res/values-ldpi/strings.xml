@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DNP</string>
+
+    <string name="i_agree_with_thepolicy_under"><u>I agree with the Privacy Policy</u></string>
+    <string name="i_agree_with_thepolicy">I agree with the Privacy Policy</string>
+    <string name="internet_error">The device date / time is incorrect.\n Please set it to \"Automatic\" and try again.</string>
+
+
+
+
+
+</resources>

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "846706984718",
+    "project_id": "provizit-ksa",
+    "storage_bucket": "provizit-ksa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846706984718:android:e3e243baabbe824b95f95f",
+        "android_client_info": {
+          "package_name": "com.provizit.dnp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846706984718-07nrvuajrubo8hstcn2okhcgjkaukupf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWqhZnfjXbKY6FiaGiKv5VO1yn-n2aW9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846706984718-07nrvuajrubo8hstcn2okhcgjkaukupf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "846706984718-9ns50qnadgsq08pvg1j4q2n734268m05.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.provizit.provizit.ksa"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
