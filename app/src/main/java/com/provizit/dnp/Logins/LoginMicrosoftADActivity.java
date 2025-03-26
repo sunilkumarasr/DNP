@@ -330,7 +330,6 @@ public class LoginMicrosoftADActivity extends AppCompatActivity implements View.
         }
     }
 
-
     private void microsoft_ad(String clientid, String tenantid, String clientsecret) {
         editor1.putString("company_id", company_id);
         editor1.commit();
