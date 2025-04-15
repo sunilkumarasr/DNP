@@ -100,7 +100,6 @@
                             android:id="@+id/next"
                             android:layout_width="250sp"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
                             android:background="@drawable/ripple"
                             style="@style/medium_font"
                             android:padding="10dp"

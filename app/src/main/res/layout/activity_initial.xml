@@ -49,7 +49,6 @@
                     android:layout_width="180dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center_horizontal"
-                    android:contentDescription="TODO"
                     android:src="@drawable/logo" />
 
                 <LinearLayout
@@ -154,7 +153,8 @@
                         android:layout_gravity="center_vertical"
                         android:text="@string/i_agree_with_thepolicy_under"
                         android:textColor="@color/colorAccent"
-                        android:textSize="10dp" />
+                        android:textSize="12sp" />
+
                 </LinearLayout>
 
                 <Button
@@ -169,7 +169,7 @@
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/ripple"
                     android:padding="10dp"
-                    android:text="next"
+                    android:text="@string/next"
                     android:textColor="#fff"
                     android:textSize="@dimen/edittext_size" />
 

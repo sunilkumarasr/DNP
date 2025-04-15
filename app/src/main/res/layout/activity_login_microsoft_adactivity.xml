@@ -48,7 +48,6 @@
                     android:layout_width="180dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center_horizontal"
-                    android:contentDescription="TODO"
                     android:src="@drawable/logo" />
 
                 <LinearLayout
@@ -102,7 +101,7 @@
                     android:background="@drawable/ripple"
                     style="@style/medium_font"
                     android:padding="10dp"
-                    android:text="next"
+                    android:text="@string/next"
                     android:textColor="#fff"
                     android:textSize="@dimen/edittext_size"/>
 

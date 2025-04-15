@@ -240,7 +240,6 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="@dimen/_5sdp"
-
                                         android:fontFamily="@font/roboto_regular"
                                         android:textAlignment="center"
                                         android:textColor="@color/white"
@@ -544,7 +543,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:singleLine="true"
-                    android:text="Urukundu"
+                    android:text="*******"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="60sp" />
@@ -554,7 +553,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Android Developer"
+                    android:text="*******"
                     android:textAlignment="center"
                     android:textColor="@color/gray"
                     android:textSize="25sp" />
@@ -578,7 +577,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_medium"
-                        android:text="Mobile Department"
+                        android:text="*********"
                         android:textColor="@color/gray"
                         android:textSize="25sp" />
 
@@ -617,7 +616,7 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="120dp"
                             android:fontFamily="@font/roboto_medium"
-                            android:text="10:00 AM to 11:00 PM"
+                            android:text="00:00 AM to 00:00 PM"
                             android:textColor="@color/white"
                             android:textSize="25sp"
                             android:visibility="gone" />
