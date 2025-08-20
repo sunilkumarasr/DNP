@@ -336,7 +336,8 @@ public class LoginMicrosoftADActivity extends AppCompatActivity implements View.
         editor1.apply();
         Company_ID = company_id;
         AUTHORITY = "https://login.microsoftonline.com/" + tenantid;
-        REDIRECT_URI = "msauth://com.provizit.dnp/RNy5oraIA7QxAEY9MB%2FZ5j%2FwWgo%3D";
+//        REDIRECT_URI = "msauth://com.provizit.dnp/RNy5oraIA7QxAEY9MB%2FZ5j%2FwWgo%3D";
+        REDIRECT_URI = "msauth://com.provizit.dnp/XOxiXP5sHpCTpS6%2B7FUGil5ZOLg%3D";
         CLIENT_ID = clientid;
 
         // Create PublicClientApplication instance

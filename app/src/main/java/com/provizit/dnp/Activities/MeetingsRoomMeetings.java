@@ -58,6 +58,7 @@ import com.microsoft.identity.client.exception.MsalException;
 import com.provizit.dnp.AESUtil;
 import com.provizit.dnp.Calendar.myCalendarData;
 import com.provizit.dnp.CircleImageView;
+import com.provizit.dnp.Logins.LoginMicrosoftADActivity;
 import com.provizit.dnp.config.Preferences;
 import com.provizit.dnp.config.ProgressLoader;
 import com.provizit.dnp.config.ViewController;
@@ -497,25 +498,46 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
         });
 
         logo.setOnClickListener(v -> {
-            ViewController.hideKeyboard(MeetingsRoomMeetings.this);
+//            ViewController.hideKeyboard(MeetingsRoomMeetings.this);
+//            JsonObject gsonObject = new JsonObject();
+//            JSONObject jsonObj_ = new JSONObject();
+//            try {
+//                jsonObj_.put("id", "");
+//                jsonObj_.put("mverify", 0);
+//                jsonObj_.put("password", password);
+//                jsonObj_.put("type", "email");
+//                jsonObj_.put("val", empData.getEmail().trim());
+//
+//                JsonParser jsonParser = new JsonParser();
+//                gsonObject = (JsonObject) jsonParser.parse(jsonObj_.toString());
+//            } catch (JSONException e) {
+//                e.printStackTrace();
+//            }
+//            ProgressLoader.show(MeetingsRoomMeetings.this);
+//            CheckSetupModelRequest checkSetupModelRequest = new CheckSetupModelRequest(empData.getEmail().trim());
+//            apiViewModel.checkSetup(getApplicationContext(), checkSetupModelRequest);
 
-            JsonObject gsonObject = new JsonObject();
-            JSONObject jsonObj_ = new JSONObject();
-            try {
-                jsonObj_.put("id", "");
-                jsonObj_.put("mverify", 0);
-                jsonObj_.put("password", password);
-                jsonObj_.put("type", "email");
-                jsonObj_.put("val", empData.getEmail().trim());
 
-                JsonParser jsonParser = new JsonParser();
-                gsonObject = (JsonObject) jsonParser.parse(jsonObj_.toString());
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            ProgressLoader.show(MeetingsRoomMeetings.this);
-            CheckSetupModelRequest checkSetupModelRequest = new CheckSetupModelRequest(empData.getEmail().trim());
-            apiViewModel.checkSetup(getApplicationContext(), checkSetupModelRequest);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Logout");
+            builder.setMessage("Are you sure you want to Logout?");
+            builder.setPositiveButton("Yes", (dialog, which) -> {
+                sharedPreferences1.edit().clear().apply();
+                editor1.clear();
+                editor1.apply();
+                myDb.clearDatabase("token_table");
+                Intent intent = new Intent(MeetingsRoomMeetings.this, LoginMicrosoftADActivity.class);
+                startActivity(intent);
+                finish();
+                dialog.dismiss();
+            });
+
+            builder.setNeutralButton("Cancel", (dialog, which) -> {
+                dialog.dismiss();
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+
         });
 
         apiViewModel.getappuserloginResponse().observe(this, response -> {
@@ -871,7 +893,7 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                     getmeetings(s_time, e_time);
 
                 } else {
-                    // Handle the case where the response is not successful or body is null
+                    //Handle the case where the response is not successful or body is null
                 }
             }
 
@@ -951,7 +973,6 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                     @Override
                     public void onSuccess(IAuthenticationResult authenticationResult) {
                         IAccount account = authenticationResult.getAccount();
-
                         if (account != null) {
                             // Get the username from the account
                             username = account.getUsername();
@@ -971,29 +992,24 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                             apiViewModel.userADlogin(getApplicationContext(), gsonObject);
                             ProgressLoader.show(MeetingsRoomMeetings.this);
                         }
-
                     }
-
                     @Override
                     public void onError(MsalException exception) {
                         // Handle authentication error
                         exception.printStackTrace();
                     }
-
                     @Override
                     public void onCancel() {
                         // Handle user cancellation
                     }
                 });
             }
-
             @Override
             public void onError(MsalException exception) {
                 // Handle application creation error
                 exception.printStackTrace();
             }
         });
-
     }
 
     public String adbcommand(String command) {

@@ -219,7 +219,6 @@ public class OtpActivity extends AppCompatActivity {
                             Intent intent = new Intent(OtpActivity.this, LoginMicrosoftADActivity.class);
                             startActivity(intent);
                             finish();
-
                         }
                     } else if (activity_type.equals("Azure")) {
                         sharedPreferences1.edit().clear().apply();

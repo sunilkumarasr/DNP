@@ -588,7 +588,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:orientation="horizontal">
-
                     <androidx.cardview.widget.CardView
                         android:id="@+id/m_time"
                         android:layout_width="match_parent"
@@ -598,7 +597,6 @@
                         android:layout_marginEnd="@dimen/_30sdp"
                         app:cardCornerRadius="15dp"
                         app:cardElevation="50dp">
-
                         <TextView
                             android:id="@+id/m_timeText"
                             android:layout_width="wrap_content"
@@ -608,7 +606,6 @@
                             android:gravity="center_vertical"
                             android:textColor="@color/white"
                             android:textSize="70sp" />
-
                         <TextView
                             android:id="@+id/m_start_endtime"
                             android:layout_width="wrap_content"
@@ -620,7 +617,6 @@
                             android:textColor="@color/white"
                             android:textSize="25sp"
                             android:visibility="gone" />
-
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 

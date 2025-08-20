@@ -105,8 +105,9 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data
                     android:host="com.provizit.dnp"
-                    android:path="/RNy5oraIA7QxAEY9MB/Z5j/wWgo="
+                    android:path="/XOxiXP5sHpCTpS6+7FUGil5ZOLg="
                     android:scheme="msauth" />
+<!--                android:path="/RNy5oraIA7QxAEY9MB/Z5j/wWgo="-->
             </intent-filter>
         </activity>
         <meta-data
