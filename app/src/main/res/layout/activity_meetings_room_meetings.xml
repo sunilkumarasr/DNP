@@ -364,7 +364,6 @@
                                         android:id="@+id/invitee1Name"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-
                                         android:layout_marginLeft="@dimen/_4sdp"
                                         android:fontFamily="@font/roboto_medium"
                                         android:singleLine="true"
@@ -393,7 +392,6 @@
                                         android:layout_marginLeft="@dimen/_4sdp"
                                         android:fontFamily="@font/roboto_medium"
                                         android:singleLine="true"
-
                                         android:text="--------"
                                         android:textColor="@color/app_tcolor"
                                         android:textSize="@dimen/_11sdp" />
@@ -430,13 +428,6 @@
                         android:gravity="right"
                         android:orientation="vertical">
 
-
-                        <androidx.recyclerview.widget.RecyclerView
-
-                            android:id="@+id/meetingsRecyclerView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:visibility="gone" />
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/recyclrView"

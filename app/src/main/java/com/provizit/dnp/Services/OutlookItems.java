@@ -20,10 +20,10 @@ public class OutlookItems implements Serializable {
     public String ml_status;
     public String name;
     public String rmname;
-    public Long start;
-    public Long end;
-    public Long t_start;
-    public Long t_end;
+    public long start;
+    public long end;
+    public long t_start;
+    public long t_end;
     public Boolean isOnlineMeeting;
 
     public Boolean getOnlineMeeting() {
@@ -98,19 +98,19 @@ public class OutlookItems implements Serializable {
         return ml_status;
     }
 
-    public Long getStart() {
+    public long getStart() {
         return start;
     }
 
-    public Long getEnd() {
+    public long getEnd() {
         return end;
     }
 
-    public Long getT_start() {
+    public long getT_start() {
         return t_start;
     }
 
-    public Long getT_end() {
+    public long getT_end() {
         return t_end;
     }
 }

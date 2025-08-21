@@ -40,7 +40,7 @@ public class CompanyData implements Serializable {
     private Boolean projector, screen, internet, telephone, speaker, active, pdfStatus, pslots;
     private CommonObject _id;
     private ArrayList<LocationData> address;
-    private long date, start, end;
+    private long date, start, end, t_start, t_end;
     private String  o_start, o_end;
     private ArrayList<String> pic;
     private String e_pic;
@@ -413,6 +413,22 @@ public class CompanyData implements Serializable {
 
     public void setEnd(long end) {
         this.end = end;
+    }
+
+    public long getT_start() {
+        return t_start;
+    }
+
+    public void setT_start(long t_start) {
+        this.t_start = t_start;
+    }
+
+    public long getT_end() {
+        return t_end;
+    }
+
+    public void setT_end(long t_end) {
+        this.t_end = t_end;
     }
 
     public String getSubject() {

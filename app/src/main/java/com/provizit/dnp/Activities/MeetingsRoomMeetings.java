@@ -96,12 +96,15 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Objects;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MeetingsRoomMeetings extends AppCompatActivity {
+
+    private static Locale locale;
     TextView presentTime;
     EthernetDataReceiver ethernetDataReceiver;
     TextView inviteesT;
@@ -119,7 +122,6 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
     CircleImageView invitee1Image;
     CircleImageView invitee2Image;
     CircleImageView employee_img;
-    RecyclerView meetingsRecyclerView;
     RecyclerView recyclerView;
     CardView m_time;
     PeopleAdapter adapter1;
@@ -177,14 +179,19 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
         return calendar;
     }
 
+
     public static String millitotime(Long millSec, Boolean is24hours) {
-        DateFormat simple = new SimpleDateFormat("hh:mm aa");
+        locale = new Locale(DataManger.appLanguage);
+        DateFormat simple = new SimpleDateFormat("hh:mm aa", locale);
+
         if (is24hours) {
             simple = new SimpleDateFormat("HH:mm");
         }
         Date result = new Date(millSec);
-        return simple.format(result);
+        String time = simple.format(result) + "";
+        return time;
     }
+
 
     public static String millitoDate(Long millSec) {
         DateFormat simple = new SimpleDateFormat("yyyyMMdd");
@@ -403,7 +410,8 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
 
                         // Run UI-related tasks on the UI thread
                         runOnUiThread(() -> {
-                            getbusyScheduledetails(comp_id, id, "");
+//                            getbusyScheduledetails(comp_id, id, "");
+                            getoutlookappointments("upcoming", email, comp_id, start, end);
                         });
                     }
                 } catch (InterruptedException e) {
@@ -440,7 +448,7 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
 
         t1.start();
 
-//        autoShutdown(dayInt);
+//      autoShutdown(dayInt);
 
         apiViewModel.getEmployeeDetailsResponse().observe(this, new Observer<JsonObject>() {
             @Override
@@ -497,6 +505,9 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
             }
         });
 
+        CheckSetupModelRequest checkSetupModelRequest = new CheckSetupModelRequest(empData.getEmail().trim());
+        apiViewModel.checkSetup(getApplicationContext(), checkSetupModelRequest);
+
         logo.setOnClickListener(v -> {
 //            ViewController.hideKeyboard(MeetingsRoomMeetings.this);
 //            JsonObject gsonObject = new JsonObject();
@@ -507,7 +518,7 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
 //                jsonObj_.put("password", password);
 //                jsonObj_.put("type", "email");
 //                jsonObj_.put("val", empData.getEmail().trim());
-//
+
 //                JsonParser jsonParser = new JsonParser();
 //                gsonObject = (JsonObject) jsonParser.parse(jsonObj_.toString());
 //            } catch (JSONException e) {
@@ -516,7 +527,6 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
 //            ProgressLoader.show(MeetingsRoomMeetings.this);
 //            CheckSetupModelRequest checkSetupModelRequest = new CheckSetupModelRequest(empData.getEmail().trim());
 //            apiViewModel.checkSetup(getApplicationContext(), checkSetupModelRequest);
-
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Logout");
@@ -541,7 +551,6 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
         });
 
         apiViewModel.getappuserloginResponse().observe(this, response -> {
-
             if (response != null) {
                 Integer statuscode = response.getResult();
                 Integer successcode = 200, failurecode = 201, not_verified = 404, internet_verified = 500;
@@ -580,7 +589,6 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
 
         apiViewModel.getotpsendemailResponse().observe(this, response -> {
             ProgressLoader.hide();
-
             if (response != null) {
                 Intent intent = new Intent(MeetingsRoomMeetings.this, OtpActivity.class);
                 intent.putExtra("activity_type", "Logout");
@@ -745,7 +753,8 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                         }
                         logo.setVisibility(View.VISIBLE);
 
-                        getbusyScheduledetails(comp_id, id, "");
+                       // getbusyScheduledetails(comp_id, id, "");
+                        getoutlookappointments("upcoming", email, comp_id, start, end);
 
                     } else if (statuscode.equals(not_verified)) {
                     }
@@ -816,6 +825,7 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                         }
                         meetingsArraylist = insertionSort(meetingsArraylist);
                         meetings.addAll(meetingsArraylist);
+
                         // outlookmeetings
                         if (Azure_status != null && Azure_status) {
                             getoutlookappointments("upcoming", email, comp_id, start, end);
@@ -890,7 +900,7 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                     String s_time = String.valueOf((cal.getTimeInMillis() / 1000) - timezone());
                     String e_time = String.valueOf((getEndOfADay(cal.getTime()).getTimeInMillis() / 1000) - timezone());
 
-                    getmeetings(s_time, e_time);
+                    //getmeetings(s_time, e_time);
 
                 } else {
                     //Handle the case where the response is not successful or body is null
@@ -1051,7 +1061,6 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
         invitee2Image = findViewById(R.id.invitee2Image);
         invitee1Name = findViewById(R.id.invitee1Name);
         invitee2Name = findViewById(R.id.invitee2Name);
-        meetingsRecyclerView = findViewById(R.id.meetingsRecyclerView);
         recyclerView = findViewById(R.id.recyclerView);
         invitee2layout = findViewById(R.id.invitee2layout);
         m_timeText = findViewById(R.id.m_timeText);
@@ -1362,12 +1371,14 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull MeetingViewHolder holder, int position) {
+
             if (meetigsArrayList.isEmpty()) {
                 holder.empty_card.setVisibility(View.VISIBLE);
                 holder.l1.setVisibility(View.GONE);
                 holder.l2.setVisibility(View.GONE);
-
             } else {
+                Log.e("getT_start_",meetigsArrayList.get(position).getT_start()+"");
+                Log.e("getT_end_",meetigsArrayList.get(position).getT_end()+"");
                 String supertype = meetigsArrayList.get(position).getSupertype();
                 String s_date = millitoDate((meetigsArrayList.get(position).getStart() + timezone()) * 1000);
                 String s_time = millitotime((meetigsArrayList.get(position).getStart() + timezone()) * 1000, false);
@@ -1375,7 +1386,9 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                 holder.m_start.setText(s_time);
                 holder.m_end.setText(e_time);
                 holder.m_end.setVisibility(View.VISIBLE);
+//                holder.txtType.setText(meetigsArrayList.get(position));
             }
+
         }
 
         @Override
@@ -1390,7 +1403,7 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
         }
 
         public class MeetingViewHolder extends RecyclerView.ViewHolder {
-            TextView m_start, m_end, empty, slash;
+            TextView txtType, m_start, m_end, empty, slash;
             TextView confidential_text, non_confidential_text;
             LinearLayout static_card;
             CardView empty_card;
@@ -1399,6 +1412,7 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
 
             public MeetingViewHolder(@NonNull View itemView) {
                 super(itemView);
+                txtType = itemView.findViewById(R.id.txtType);
                 m_start = itemView.findViewById(R.id.m_start);
                 m_end = itemView.findViewById(R.id.m_end);
                 slash = itemView.findViewById(R.id.slash);
