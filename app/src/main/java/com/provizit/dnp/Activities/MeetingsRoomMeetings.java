@@ -98,6 +98,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.TimeZone;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -179,7 +181,6 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
         return calendar;
     }
 
-
     public static String millitotime(Long millSec, Boolean is24hours) {
         locale = new Locale(DataManger.appLanguage);
         DateFormat simple = new SimpleDateFormat("hh:mm aa", locale);
@@ -191,7 +192,6 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
         String time = simple.format(result) + "";
         return time;
     }
-
 
     public static String millitoDate(Long millSec) {
         DateFormat simple = new SimpleDateFormat("yyyyMMdd");
@@ -1378,11 +1378,13 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                 holder.l2.setVisibility(View.GONE);
             } else {
                 Log.e("getT_start_",meetigsArrayList.get(position).getT_start()+"");
+                Log.e("getT_start_",meetigsArrayList.get(position).getStart()+"");
                 Log.e("getT_end_",meetigsArrayList.get(position).getT_end()+"");
+                Log.e("getT_end_",meetigsArrayList.get(position).getEnd()+"");
                 String supertype = meetigsArrayList.get(position).getSupertype();
                 String s_date = millitoDate((meetigsArrayList.get(position).getStart() + timezone()) * 1000);
-                String s_time = millitotime((meetigsArrayList.get(position).getStart() + timezone()) * 1000, false);
-                String e_time = millitotime((meetigsArrayList.get(position).getEnd() + 1 + timezone()) * 1000, false);
+                String s_time = millitotime(meetigsArrayList.get(position).getStart() * 1000, false);
+                String e_time = millitotime(meetigsArrayList.get(position).getEnd() * 1000, false);
                 holder.m_start.setText(s_time);
                 holder.m_end.setText(e_time);
                 holder.m_end.setVisibility(View.VISIBLE);
