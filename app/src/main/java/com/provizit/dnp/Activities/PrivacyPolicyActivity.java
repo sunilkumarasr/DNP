@@ -20,7 +20,7 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.provizit.dnp.config.ConnectionReceiver;
+import com.provizit.dnp.Config.ConnectionReceiver;
 import com.provizit.dnp.Conversions;
 import com.provizit.dnp.R;
 import com.provizit.dnp.Services.DataManger;

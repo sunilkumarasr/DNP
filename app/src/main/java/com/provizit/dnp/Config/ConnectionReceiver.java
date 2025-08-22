@@ -1,4 +1,4 @@
-package com.provizit.dnp.config;
+package com.provizit.dnp.Config;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

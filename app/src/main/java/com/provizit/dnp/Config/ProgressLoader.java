@@ -1,11 +1,10 @@
-package com.provizit.dnp.config;
+package com.provizit.dnp.Config;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.view.Window;
 
 import com.provizit.dnp.R;
-
 
 public class ProgressLoader {
 

@@ -58,10 +58,9 @@ import com.microsoft.identity.client.exception.MsalException;
 import com.provizit.dnp.AESUtil;
 import com.provizit.dnp.Calendar.myCalendarData;
 import com.provizit.dnp.CircleImageView;
+import com.provizit.dnp.Config.ProgressLoader;
 import com.provizit.dnp.Logins.LoginMicrosoftADActivity;
-import com.provizit.dnp.config.Preferences;
-import com.provizit.dnp.config.ProgressLoader;
-import com.provizit.dnp.config.ViewController;
+import com.provizit.dnp.Config.Preferences;
 import com.provizit.dnp.Conversions;
 import com.provizit.dnp.Logins.InitialActivity;
 import com.provizit.dnp.Logins.OtpActivity;
@@ -192,6 +191,23 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
         String time = simple.format(result) + "";
         return time;
     }
+
+    public static String millitotimeTest(Long millSec, Boolean is24hours) {
+        DateFormat simple;
+
+        if (is24hours) {
+            simple = new SimpleDateFormat("HH:mm");   // 24h format
+        } else {
+            simple = new SimpleDateFormat("hh:mm aa"); // 12h AM/PM format
+        }
+
+        // 👉 Force Universal Time Zone (UTC)
+        simple.setTimeZone(TimeZone.getTimeZone("UTC"));
+
+        Date result = new Date(millSec);
+        return simple.format(result);
+    }
+
 
     public static String millitoDate(Long millSec) {
         DateFormat simple = new SimpleDateFormat("yyyyMMdd");
@@ -410,8 +426,8 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
 
                         // Run UI-related tasks on the UI thread
                         runOnUiThread(() -> {
-//                            getbusyScheduledetails(comp_id, id, "");
-                            getoutlookappointments("upcoming", email, comp_id, start, end);
+                            getbusyScheduledetails(comp_id, id, "");
+//                            getoutlookappointments("upcoming", email, comp_id, start, end);
                         });
                     }
                 } catch (InterruptedException e) {
@@ -574,13 +590,13 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                 } else if (statuscode.equals(not_verified)) {
                     ProgressLoader.hide();
                 } else if (statuscode.equals(successcode)) {
-                    otp = Conversions.getNDigitRandomNumber(4);
-                    editor1.putString("ProvizitOtp", String.valueOf(otp));
-                    editor1.putString("ProvizitEmail", empData.getEmail().trim());
-                    editor1.commit();
-                    editor1.apply();
-                    OtpSendEmaiModelRequest otpSendEmaiModelRequest = new OtpSendEmaiModelRequest(empData.getEmail().trim(), empData.getEmail().trim(), aesUtil.encrypt(String.valueOf(otp), "egems_2013_grms_2017_provizit_2020"), aesUtil.encrypt(String.valueOf(otp), empData.getEmail().trim()));
-                    apiViewModel.otpsendemail(getApplicationContext(), otpSendEmaiModelRequest);
+//                    otp = Conversions.getNDigitRandomNumber(4);
+//                    editor1.putString("ProvizitOtp", String.valueOf(otp));
+//                    editor1.putString("ProvizitEmail", empData.getEmail().trim());
+//                    editor1.commit();
+//                    editor1.apply();
+//                    OtpSendEmaiModelRequest otpSendEmaiModelRequest = new OtpSendEmaiModelRequest(empData.getEmail().trim(), empData.getEmail().trim(), aesUtil.encrypt(String.valueOf(otp), "egems_2013_grms_2017_provizit_2020"), aesUtil.encrypt(String.valueOf(otp), empData.getEmail().trim()));
+//                    apiViewModel.otpsendemail(getApplicationContext(), otpSendEmaiModelRequest);
                 }
             } else {
                 ProgressLoader.hide();
@@ -684,14 +700,14 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                             ProgressLoader.hide();
                         }
                     } else if (LoginType.equalsIgnoreCase("OTP")) {
-                        otp = Conversions.getNDigitRandomNumber(4);
-                        editor1.putString("ProvizitOtp", String.valueOf(otp));
-                        editor1.putString("ProvizitEmail", empData.getEmail().trim());
-                        editor1.commit();
-                        editor1.apply();
-                        //otp send api
-                        OtpSendEmaiModelRequest otpSendEmaiModelRequest = new OtpSendEmaiModelRequest(empData.getEmail().trim(), empData.getEmail().trim(), aesUtil.encrypt(String.valueOf(otp), "egems_2013_grms_2017_provizit_2020"), aesUtil.encrypt(String.valueOf(otp), empData.getEmail().trim()));
-                        apiViewModel.otpsendemail(getApplicationContext(), otpSendEmaiModelRequest);
+//                        otp = Conversions.getNDigitRandomNumber(4);
+//                        editor1.putString("ProvizitOtp", String.valueOf(otp));
+//                        editor1.putString("ProvizitEmail", empData.getEmail().trim());
+//                        editor1.commit();
+//                        editor1.apply();
+//                        //otp send api
+//                        OtpSendEmaiModelRequest otpSendEmaiModelRequest = new OtpSendEmaiModelRequest(empData.getEmail().trim(), empData.getEmail().trim(), aesUtil.encrypt(String.valueOf(otp), "egems_2013_grms_2017_provizit_2020"), aesUtil.encrypt(String.valueOf(otp), empData.getEmail().trim()));
+//                        apiViewModel.otpsendemail(getApplicationContext(), otpSendEmaiModelRequest);
 
                     } else {
                         ProgressLoader.hide();
@@ -753,8 +769,8 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                         }
                         logo.setVisibility(View.VISIBLE);
 
-                       // getbusyScheduledetails(comp_id, id, "");
-                        getoutlookappointments("upcoming", email, comp_id, start, end);
+                        getbusyScheduledetails(comp_id, id, "");
+//                        getoutlookappointments("upcoming", email, comp_id, start, end);
 
                     } else if (statuscode.equals(not_verified)) {
                     }
@@ -879,6 +895,7 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                     if (outLookMeetings != null && !outLookMeetings.isEmpty()) {
                         for (int i = 0; i < outLookMeetings.size(); i++) {
                             CompanyData meeting = new CompanyData();
+
                             // Convert t_start and t_end to IST
                             long t_start_IST = convertToIST(outLookMeetings.get(i).t_start);
                             long t_end_IST = convertToIST(outLookMeetings.get(i).t_end);
@@ -887,7 +904,13 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                             meeting.setEnd(t_end_IST);  // Use the converted IST time
                             meeting.setSupertype(outLookMeetings.get(i).getSupertype());
 
-                            meetingsArraylist.add(meeting);
+                            Log.e("t_start_",outLookMeetings.get(i).t_start+"");
+                            Log.e("t_start_",outLookMeetings.get(i).start+"");
+                            Log.e("t_end_",outLookMeetings.get(i).t_end+"");
+                            Log.e("t_end_",outLookMeetings.get(i).end+"");
+
+//                            meetingsArraylist.add(meeting);
+                            meetings.add(meeting);
                         }
                     }
                     // Sort and update meetings
@@ -900,7 +923,7 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                     String s_time = String.valueOf((cal.getTimeInMillis() / 1000) - timezone());
                     String e_time = String.valueOf((getEndOfADay(cal.getTime()).getTimeInMillis() / 1000) - timezone());
 
-                    //getmeetings(s_time, e_time);
+                    getmeetings(s_time, e_time);
 
                 } else {
                     //Handle the case where the response is not successful or body is null
@@ -915,7 +938,8 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
 
     private long convertToIST(long utcTime) {
         // Convert UTC time to IST (UTC+5:30)
-        return utcTime + 19800000L; // 5 hours 30 minutes in milliseconds
+//        return utcTime + 19800000L; // 5 hours 30 minutes in milliseconds
+        return utcTime + 10800000L; // 3 hours in milliseconds
     }
 
     private void getmeetings(String s_time, String e_time) {
@@ -1131,6 +1155,7 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                 m_start_endtime.setVisibility(View.GONE);
             }
         } else {
+            Log.e("testEmpty_",meetings.size()+"");
             adbcommand("echo w 0x05 > ./sys/devices/platform/led_con_h/zigbee_reset");
             m_time.setCardBackgroundColor(getResources().getColor(R.color.nextmeeting));
             employee_img.setBorderColor(getResources().getColor(R.color.nextmeeting));
@@ -1383,8 +1408,8 @@ public class MeetingsRoomMeetings extends AppCompatActivity {
                 Log.e("getT_end_",meetigsArrayList.get(position).getEnd()+"");
                 String supertype = meetigsArrayList.get(position).getSupertype();
                 String s_date = millitoDate((meetigsArrayList.get(position).getStart() + timezone()) * 1000);
-                String s_time = millitotime(meetigsArrayList.get(position).getStart() * 1000, false);
-                String e_time = millitotime(meetigsArrayList.get(position).getEnd() * 1000, false);
+                String s_time = millitotimeTest(meetigsArrayList.get(position).getStart() * 1000, false);
+                String e_time = millitotimeTest(meetigsArrayList.get(position).getEnd() * 1000, false);
                 holder.m_start.setText(s_time);
                 holder.m_end.setText(e_time);
                 holder.m_end.setVisibility(View.VISIBLE);

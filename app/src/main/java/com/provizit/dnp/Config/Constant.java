@@ -1,4 +1,4 @@
-package com.provizit.dnp.config;
+package com.provizit.dnp.Config;
 
 public class Constant {
 

@@ -1,4 +1,4 @@
-package com.provizit.dnp.config;
+package com.provizit.dnp.Config;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -15,7 +15,6 @@ public class Preferences {
     public static final String comp_id = "comp_id";
     public static final String email = "email";
     public static final String password = "password";
-
 
 
     public static void saveFloatValue(Context context, String key, float value) {
